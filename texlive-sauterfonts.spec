@@ -82,3 +82,17 @@ symbols.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070114-2
++ Revision: 755792
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070114-1
++ Revision: 719483
+- texlive-sauterfonts
+- texlive-sauterfonts
+- texlive-sauterfonts
+- texlive-sauterfonts
+
