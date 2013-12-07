@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-sauterfonts
 Version:	20070114
-Release:	4
+Release:	5
 Summary:	Use sauter fonts in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sauterfonts
