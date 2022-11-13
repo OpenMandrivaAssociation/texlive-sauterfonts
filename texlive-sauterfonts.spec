@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/sauterfonts
-# catalog-date 2007-01-14 10:43:12 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-sauterfonts
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Use sauter fonts in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sauterfonts
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ access the bbm fonts, a nice collection of blackboard bold
 symbols.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -75,24 +69,11 @@ symbols.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070114-2
-+ Revision: 755792
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070114-1
-+ Revision: 719483
-- texlive-sauterfonts
-- texlive-sauterfonts
-- texlive-sauterfonts
-- texlive-sauterfonts
-
