@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Use sauter fonts in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sauterfonts
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/sauterfonts
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sauterfonts.doc.r%{version}.tar.xz
